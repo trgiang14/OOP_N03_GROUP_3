@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22"
+            fx:controller="com.example.Controller.ProductController">
+    <children>
+        <Label layoutX="222.0" prefHeight="36.0" prefWidth="156.0" text="Quản lý sản phẩm" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="idField" layoutX="206.0" layoutY="36.0" prefHeight="26.0" prefWidth="266.0"/>
+        <Label layoutX="131.0" layoutY="40.0" text="ID:"/>
+        <TextField fx:id="nameField" layoutX="206.0" layoutY="77.0" prefHeight="26.0" prefWidth="266.0"/>
+        <Label layoutX="129.0" layoutY="81.0" text="Tên:"/>
+        <TextField fx:id="priceField" layoutX="206.0" layoutY="118.0" prefHeight="26.0" prefWidth="266.0"/>
+        <Label layoutX="129.0" layoutY="122.0" text="Giá:"/>
+        <TextField fx:id="quantityField" layoutX="206.0" layoutY="159.0" prefHeight="26.0" prefWidth="266.0"/>
+        <Label layoutX="128.0" layoutY="163.0" text="Số lượng:"/>
+        <Label layoutX="128.0" layoutY="205.0" text="Ngày hết hạn:"/>
+        <TextField fx:id="weightField" layoutX="206.0" layoutY="243.0" prefHeight="26.0" prefWidth="266.0"/>
+        <Label layoutX="126.0" layoutY="247.0" text="Trọng lượng:"/>
+        <TextField fx:id="descriptionField" layoutX="206.0" layoutY="285.0" prefHeight="26.0" prefWidth="266.0"/>
+        <Label layoutX="129.0" layoutY="289.0" text="Mô tả:"/>
+        <Button layoutX="76.0" layoutY="345.0" mnemonicParsing="false" onAction="#addProduct" text="Thêm sản phẩm"/>
+        <Button layoutX="269.0" layoutY="346.0" mnemonicParsing="false" onAction="#updateProduct" text="Sửa sản phẩm"/>
+        <Button layoutX="444.0" layoutY="345.0" mnemonicParsing="false" onAction="#deleteProduct" text="Xoá sản phẩm"/>
+        <Label fx:id="statusLabel" layoutX="130.0" layoutY="321.0" prefHeight="18.0" prefWidth="341.0"/>
+        <DatePicker fx:id="expiryDateField" layoutX="207.0" layoutY="202.0" prefHeight="26.0" prefWidth="266.0"/>
+    </children>
+</AnchorPane>
