@@ -50,7 +50,7 @@ public class ProductController {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String insertProduct = "INSERT INTO products(product_id, product_name, product_price, product_quantity, expiry_date, description, weight) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String insertProduct = "INSERT INTO products(id, name, price, quantity, expiry_date, description, weight) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStatement = connectDB.prepareStatement(insertProduct);
             preparedStatement.setString(1, productId);
@@ -95,7 +95,7 @@ public class ProductController {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String updateProduct = "UPDATE products SET product_name = ?, product_price = ?, product_quantity = ?, expiry_date = ?, description = ?, weight = ? WHERE product_id = ?";
+        String updateProduct = "UPDATE products SET name = ?, price = ?, quantity = ?, expiry_date = ?, description = ?, weight = ? WHERE id = ?";
         try {
             PreparedStatement preparedStatement = connectDB.prepareStatement(updateProduct);
             preparedStatement.setString(1, productName);
@@ -132,7 +132,7 @@ public class ProductController {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String deleteProduct = "DELETE FROM products WHERE product_id = ?";
+        String deleteProduct = "DELETE FROM products WHERE id = ?";
         try {
             PreparedStatement preparedStatement = connectDB.prepareStatement(deleteProduct);
             preparedStatement.setString(1, productId);

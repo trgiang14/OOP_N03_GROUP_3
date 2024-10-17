@@ -27,7 +27,8 @@
         <Button layoutX="76.0" layoutY="345.0" mnemonicParsing="false" onAction="#addProduct" text="Thêm sản phẩm"/>
         <Button layoutX="269.0" layoutY="346.0" mnemonicParsing="false" onAction="#updateProduct" text="Sửa sản phẩm"/>
         <Button layoutX="444.0" layoutY="345.0" mnemonicParsing="false" onAction="#deleteProduct" text="Xoá sản phẩm"/>
-        <Label fx:id="statusLabel" layoutX="130.0" layoutY="321.0" prefHeight="18.0" prefWidth="341.0"/>
+        <Label fx:id="messageLabel" layoutX="130.0" layoutY="321.0" prefHeight="18.0" prefWidth="341.0"
+               textAlignment="CENTER"/>
         <DatePicker fx:id="expiryDateField" layoutX="207.0" layoutY="202.0" prefHeight="26.0" prefWidth="266.0"/>
     </children>
 </AnchorPane>

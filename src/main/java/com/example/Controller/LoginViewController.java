@@ -58,8 +58,7 @@ public class LoginViewController {
 
     private void openProductManagement() {
         try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("src/main/resources/com/example/ProductsManagement.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ProductsManagement.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
@@ -74,6 +73,6 @@ public class LoginViewController {
             e.printStackTrace();
             thongBaoDangNhap.setText(e.getMessage());
         }
-
     }
+
 }
