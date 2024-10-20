@@ -5,7 +5,7 @@ import java.sql.*;
 public class DatabaseListSP {
 
     // Thông tin kết nối tới cơ sở dữ liệu
-    private static final String URL = "jdbc:mysql://localhost:3306/listSanPham";
+    private static final String URL = "jdbc:mysql://localhost:3306/qlbh";
     private static final String USER = "root"; // Username của database
     private static final String PASSWORD = "1234"; // Mật khẩu của database
 
