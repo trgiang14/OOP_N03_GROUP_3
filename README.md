@@ -1,6 +1,6 @@
 # **Hệ thống Quản lý Bán hàng**
 
-## **Thành viên dự án
+## **Thành viên dự án**
 Trần Thị Thu Giang
 Nguyễn Thành Long
 
@@ -29,15 +29,22 @@ Sequense Diagram 2 (Đặt hàng)
 Sequense Diagram 3 (Quản lý sản phẩm)
 ![Nhóm 3 OOP bảng UML (5)](https://github.com/user-attachments/assets/1ab51b79-28c3-427c-8377-a749c27552bc)
 
-## Giao diện**
+## **Giao diện**
+
 Giao diện đăng nhập
+
 ![image](https://github.com/user-attachments/assets/ebda8f41-5a62-4d10-ac2d-77680f4fa99c)
+
 Giao diện đặt hàng
+
 ![image](https://github.com/user-attachments/assets/af9219cc-b89c-4830-99b2-adf55a924147)
+
 Giao diện quản lý sản phẩm
+
 ![image](https://github.com/user-attachments/assets/319974f5-1584-44aa-a0f0-fa793d588ea6)
 
 ## **Kết nối đến cơ sở dữ liệu**
+
 ![image](https://github.com/user-attachments/assets/5c69e70b-df75-4a92-884d-14fdbd192394)
 
 ---
