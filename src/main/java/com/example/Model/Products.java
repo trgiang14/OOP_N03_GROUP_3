@@ -1,29 +1,29 @@
 package com.example.Model;
 
-import java.util.Date;
-
 public class Products {
-    private String idProduct;
+    private int id;
     private String name;
     private double price;
-    private int quantity;
-    private Date expiryDate;
     private String description;
-    private float weight;
+    private int quantity;
 
-    public Products(int idProduct, String name, double price, String description) {
-        this.idProduct = String.valueOf(idProduct);
+    public Products(int id, String name, double price, String description) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+        this.quantity = 0;
     }
 
-    public void setIdProduct(String idProduct) {
-        this.idProduct = idProduct;
+    public Products(String id, String name, double price, int quantity, String description) {
     }
 
-    public String getIdProduct() {
-        return idProduct;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     public void setName(String name) {
         this.name = name;
@@ -48,5 +48,12 @@ public class Products {
     public String getDescription() {
         return description;
     }
-}
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+}
