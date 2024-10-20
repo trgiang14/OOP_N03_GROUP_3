@@ -1,4 +1,8 @@
-# **Hệ thống Quản lý Bán hàng**
+![image](https://github.com/user-attachments/assets/840ec072-1e57-4e0e-80dc-bc050e8ce625)# **Hệ thống Quản lý Bán hàng**
+
+## **Thành viên dự án
+Trần Thị Thu Giang
+Nguyễn Thành Long
 
 ## **Mô tả chung**
 
@@ -6,28 +10,31 @@ Hệ thống Quản lý Bán hàng (Sales Management System) là một ứng d�
 
 Hệ thống cho phép người dùng quản lý sản phẩm, khách hàng, nhà cung cấp, nhân viên bán hàng và các báo cáo liên quan đến tồn kho một cách trực quan và dễ dàng.
 
-## **Tính năng chính**
+## **Chức năng chính**
 
-- **Quản lý sản phẩm:** Cho phép thêm, sửa, xóa và tìm kiếm sản phẩm nhanh chóng. Quản lý các thông tin chi tiết như tên sản phẩm, mã sản phẩm, số lượng, giá cả, nhà cung cấp.
+- **Quản lý sản phẩm:** Cho phép thêm, sửa, xóa sản phẩm nhanh chóng. Quản lý các thông tin chi tiết như tên sản phẩm, mã sản phẩm, số lượng, giá cả.
   
-- **Quản lý đơn hàng:** Tạo hóa đơn tự động khi thực hiện giao dịch, theo dõi các giao dịch bán hàng theo thời gian thực.
+- **Đặt hàng:** Cho phép đặt các đơn hàng một cách nhanh chóng, dễ dàng.
 
-## **Ưu điểm**
+## **UML**
+Class Diagram
+![image](https://github.com/user-attachments/assets/65458d32-3a85-4306-b3bb-4dcf97cca452)
+Sequense Diagram 1 (Đăng nhập)
+![image](https://github.com/user-attachments/assets/77019eeb-7163-479e-8b47-1e22fbc7e555)
+Sequense Diagram 2 (Đặt hàng)
+![image](https://github.com/user-attachments/assets/76640593-0f67-48a7-8072-913b86a2dc94)
+Sequense Diagram 3 (Quản lý sản phẩm)
+![Nhóm 3 OOP bảng UML (5)](https://github.com/user-attachments/assets/1ab51b79-28c3-427c-8377-a749c27552bc)
 
-- **Giao diện thân thiện:** Dễ sử dụng, ngay cả với những người không có nhiều kinh nghiệm về công nghệ.
-- **Bảo mật cao:** Dữ liệu được mã hóa và phân quyền truy cập nghiêm ngặt.
-  
-## **Ứng dụng thực tế**
+## Giao diện**
+Giao diện đăng nhập
+![image](https://github.com/user-attachments/assets/ebda8f41-5a62-4d10-ac2d-77680f4fa99c)
+Giao diện đặt hàng
+![image](https://github.com/user-attachments/assets/af9219cc-b89c-4830-99b2-adf55a924147)
+Giao diện quản lý sản phẩm
+![image](https://github.com/user-attachments/assets/319974f5-1584-44aa-a0f0-fa793d588ea6)
 
-- Cửa hàng bán lẻ
-- Siêu thị
-- Doanh nghiệp vừa và nhỏ
-- Chuỗi cửa hàng thời trang, mỹ phẩm
-- Nhà hàng, quán ăn có quản lý bán hàng trực tiếp
-
-## **Yêu cầu hệ thống**
-
-- **Cơ sở dữ liệu**: MySQL
-- **Ngôn ngữ lập trình**: Java
+## **Kết nối đến cơ sở dữ liệu**
+![image](https://github.com/user-attachments/assets/5c69e70b-df75-4a92-884d-14fdbd192394)
 
 ---
