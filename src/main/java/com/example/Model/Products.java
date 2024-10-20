@@ -11,14 +11,11 @@ public class Products {
     private String description;
     private float weight;
 
-    public Products(String idProduct, String name, double price, int quantity, Date expiryDate, String description, float weight) {
-        this.idProduct = idProduct;
+    public Products(int idProduct, String name, double price, String description) {
+        this.idProduct = String.valueOf(idProduct);
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
-        this.expiryDate = expiryDate;
         this.description = description;
-        this.weight = weight;
     }
 
     public void setIdProduct(String idProduct) {
@@ -44,36 +41,12 @@ public class Products {
         return price;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setExpiryDate(Date expiryDate) {
-        this.expiryDate = expiryDate;
-    }
-
-    public Date getExpiryDate() {
-        return expiryDate;
-    }
-
     public void setDescription(String description) {
         this.description = description;
     }
 
     public String getDescription() {
         return description;
-    }
-
-    public void setWeight(float weight) {
-        this.weight = weight;
-    }
-
-    public float getWeight() {
-        return weight;
     }
 }
 

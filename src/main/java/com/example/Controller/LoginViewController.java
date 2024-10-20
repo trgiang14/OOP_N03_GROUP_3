@@ -34,7 +34,8 @@ public class LoginViewController {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String verifyLogin = "SELECT count(1) FROM userAccounts WHERE username = ? AND password = ?";
+        // Truy vấn lấy vai trò của người dùng thay vì chỉ kiểm tra sự tồn tại
+        String verifyLogin = "SELECT role FROM userAccounts WHERE username = ? AND password = ?";
         try {
             PreparedStatement preparedStatement = connectDB.prepareStatement(verifyLogin);
             preparedStatement.setString(1, usernameTextField.getText());
@@ -43,12 +44,25 @@ public class LoginViewController {
             ResultSet queryResult = preparedStatement.executeQuery();
 
             if (queryResult.next()) {
-                if (queryResult.getInt(1) == 1) {
-                    thongBaoDangNhap.setText("Đăng nhập thành công!");
-                    openProductManagement();
-                } else {
-                    thongBaoDangNhap.setText("Đăng nhập không hợp lệ. Hãy đăng nhập lại.");
+                // Lấy vai trò của người dùng
+                String role = queryResult.getString("role");
+
+                thongBaoDangNhap.setText("Đăng nhập thành công!");
+
+                // Điều hướng đến cửa sổ dựa trên vai trò
+                switch (role) {
+                    case "Customer":
+                        switchTodatHang();
+                        break;
+                    case "Manager":
+                        openProductManagement();
+                        break;
+                    default:
+                        thongBaoDangNhap.setText("Vai trò không hợp lệ!");
+                        break;
                 }
+            } else {
+                thongBaoDangNhap.setText("Đăng nhập không hợp lệ. Hãy đăng nhập lại.");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,23 +70,48 @@ public class LoginViewController {
         }
     }
 
+    // Mở cửa sổ dành cho Manager
     private void openProductManagement() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ProductsManagement.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
-            stage.setTitle("Quản Lý Sản Phẩm");
+            stage.setTitle("Manager Dashboard");
             stage.setScene(new Scene(root));
             stage.show();
 
-
-            Stage currentStage = (Stage) usernameTextField.getScene().getWindow();
-            currentStage.close();
+            closeCurrentWindow();
         } catch (Exception e) {
             e.printStackTrace();
             thongBaoDangNhap.setText(e.getMessage());
         }
     }
 
+    //Mở cửa sổ đặt hàng
+    private void switchTodatHang() {
+        try {
+            // Tải file FXML cho danh sách sản phẩm
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/DatHang.fxml"));
+            Parent root = loader.load();
+
+            // Lấy Stage hiện tại (cửa sổ hiện tại)
+            Stage stage = (Stage) thongBaoDangNhap.getScene().getWindow();
+
+            // Tạo Scene mới từ FXML và thiết lập nó
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+            stage.setTitle("Đặt hàng");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Đóng cửa sổ hiện tại
+    private void closeCurrentWindow() {
+        Stage currentStage = (Stage) usernameTextField.getScene().getWindow();
+        currentStage.close();
+    }
 }

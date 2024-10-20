@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="datHang" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="638.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/23"
+      fx:controller="com.example.Controller.OrderController">
+    <children>
+        <TableView fx:id="productListSP" layoutY="47.0" prefHeight="534.0" prefWidth="455.0">
+            <columns>
+                <TableColumn fx:id="colIDList" prefWidth="99.99999696016312" text="Mã sản phẩm"/>
+                <TableColumn fx:id="colNameList" prefWidth="115.19998168945312" text="Tên sản phẩm"/>
+                <TableColumn fx:id="colPriceList" minWidth="0.0" prefWidth="103.20001220703125" text="Giá (VND)"/>
+                <TableColumn fx:id="colDescList" prefWidth="136.0" text="Mô tả"/>
+            </columns>
+        </TableView>
+        <Button fx:id="calculateButton" layoutX="723.0" layoutY="84.0" mnemonicParsing="false"
+                onAction="#calculateTotalPrice" prefHeight="25.0" prefWidth="96.0" text="Đặt hàng "/>
+        <Label layoutX="14.0" layoutY="9.0" prefHeight="42.0" prefWidth="336.0" text="Danh sách sản phẩm :">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <Label layoutX="498.0" layoutY="2.0" prefHeight="57.0" prefWidth="214.0" text="Mua hàng :">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="productIdInput" layoutX="531.0" layoutY="59.0" promptText="Nhập mã sản phẩm"/>
+        <TextField fx:id="quantityInput" layoutX="531.0" layoutY="109.0" promptText="Nhập số lượng"/>
+        <Label fx:id="totalPriceLabel" layoutX="519.0" layoutY="185.0" text="Tính tổng giá : 0VND">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+    </children>
+</Pane>
