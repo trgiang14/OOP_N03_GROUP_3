@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/840ec072-1e57-4e0e-80dc-bc050e8ce625)# **Hệ thống Quản lý Bán hàng**
+# **Hệ thống Quản lý Bán hàng**
 
 ## **Thành viên dự án
 Trần Thị Thu Giang
