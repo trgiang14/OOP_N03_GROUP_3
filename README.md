@@ -19,10 +19,13 @@ Hệ thống cho phép người dùng quản lý sản phẩm, khách hàng, nh�
 ## **UML**
 Class Diagram
 ![image](https://github.com/user-attachments/assets/65458d32-3a85-4306-b3bb-4dcf97cca452)
+
 Sequense Diagram 1 (Đăng nhập)
 ![image](https://github.com/user-attachments/assets/77019eeb-7163-479e-8b47-1e22fbc7e555)
+
 Sequense Diagram 2 (Đặt hàng)
 ![image](https://github.com/user-attachments/assets/76640593-0f67-48a7-8072-913b86a2dc94)
+
 Sequense Diagram 3 (Quản lý sản phẩm)
 ![Nhóm 3 OOP bảng UML (5)](https://github.com/user-attachments/assets/1ab51b79-28c3-427c-8377-a749c27552bc)
 
